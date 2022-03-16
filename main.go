@@ -9,15 +9,14 @@ import (
 )
 
 func main() {
-	// Create a new engine by passing the template folder
-	// and template extension using <engine>.New(dir, ext string)
-
 	app := fiber.New(fiber.Config{})
 
 	app.Static("/downloads", "/downloads")
 
 	app.Get("/", func(c *fiber.Ctx) error {
-		return c.Redirect("/lies/https://bascht.com")
+		c.Set("Content-Type", "text/html; charset=utf-8")
+
+		return c.SendString("<h1 style='font-family: monospace'>ⴽ Ohai</h1>")
 	})
 
 	app.Get("/lies/*", func(c *fiber.Ctx) error {
