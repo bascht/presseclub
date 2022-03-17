@@ -12,7 +12,8 @@ RUN go build -o /usr/local/bin/presseclub
 
 FROM capsulecode/singlefile
 COPY --from=presseclub /usr/local/bin/presseclub /usr/local/bin/presseclub
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 EXPOSE 3000
 
-ENTRYPOINT "presseclub"
+ENTRYPOINT "entrypoint.sh"

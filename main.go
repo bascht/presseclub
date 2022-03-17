@@ -29,6 +29,8 @@ func main() {
 			"/usr/bin/chromium-browser",
 			"--output-directory",
 			"./../../../out/",
+			"--browser-cookies-file",
+			"/tmp/cookies.txt",
 			"--browser-args", "[\"--no-sandbox\"]",
 			"--dump-content",
 			url,
