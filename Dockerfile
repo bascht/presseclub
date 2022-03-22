@@ -16,4 +16,7 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 EXPOSE 3000
 
+ENV CACHE_DIR /tmp/cache
+RUN mkdir $CACHE_DIR
+
 ENTRYPOINT "entrypoint.sh"
