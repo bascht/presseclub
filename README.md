@@ -10,10 +10,19 @@ The idea behind presseclub is to share paywalled articles with your friends.
 - Every route behind `/lies/*` is downloaded through SingleFile with a headless Chromium and the supplied cookies
 - Presseclub saves the file locally and makes the cache available at the very same URL
 
+Before and after:
+
+![Screenshot of a page before and after it went through presseclub](doc/screenshot.jpg)
+
 ### Legal disclaimer
 
 We have no idea if this is legal. (It's probably not).
 It's fun though and you should set it up for your friends.
+
+### Ethical disclaimer
+
+You *should* pay for journalism. This is *not* about defeating paywalls on a large scale.
+This is for your circle of dear friends.
 
 ### Technical disclaimer
 
